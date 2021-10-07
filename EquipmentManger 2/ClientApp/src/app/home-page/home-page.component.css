@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+#myInput {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+#myTable th,
+#myTable td {
+    text-align: left;
+    padding: 12px;
+}
+
+#myTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header,
+#myTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+/*this is my style*/
+
+.my-class {
+    margin-top: -22px;
+}
+
+.my-class2 {
+    margin-top: 10px;
+}
+
+.mybtn:hover {
+    color: white;
+}
+
+.mybtn {
+    color: #28289c;
+    font-size: large;
+    font-weight: bold;
+}
+
+.myfont {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+table {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+table thead tr th {
+    margin-left: 1%;
+    width: calc(94% / 6);
+}
+
+table tr td {
+    margin-left: 1%;
+    width: calc(94% / 6);
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

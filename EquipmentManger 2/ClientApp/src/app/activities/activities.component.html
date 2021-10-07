@@ -1,0 +1,49 @@
+<!-- <table id="myTable">
+    <thead>
+        <tr class="header">
+            <th>Equpiment Name</th>
+            <th>Serialno.</th>
+            <th>Item Name</th>
+            <th>Item PartNo.</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tr *ngFor='let x of needActivitylst'>
+        <td>{{x.equipmentName}}</td>
+        <td>{{x.equipmentSerialno}}</td>
+        <td>{{x.itemName}}</td>
+        <td>{{x.itemPartNo}}</td>
+        <td>
+            <a [routerLink]="['/Edit',x.equipmentId]" class="btn btn-secondary mybtn" data-toggle="tooltip" title="Edit Location and Enter new Reading">Proceed the Action</a>
+        </td>
+    </tr>
+</table> -->
+
+
+
+<div *ngFor='let x of serve.myarray'>
+    <h1 class="alert alert-success">{{x.equipmentName}}{{x.equipmentId}}</h1>
+
+    <div *ngFor='let y of serve.needActivitylst'>
+        <div *ngIf='y.equipmentId=== x.equipmentId'>
+            <table id="myTable">
+                <!-- <thead>
+                    <tr class="header">
+                        <th style="width: 34%;">Item Name</th>
+                        <th style="width: 30%;">Item PartNo.</th>
+                        <th style="width: 30%;"></th>
+                    </tr>
+                </thead> -->
+                <tr>
+                    <td style="width: 40%;">{{y.itemName}}</td>
+                    <td style="width: 30%;">{{y.itemPartNo}}</td>
+                    <td>
+                        <a [routerLink]="['/SetActivity',y.equipmentItemsId]" class="btn btn-secondary mybtn" data-toggle="tooltip" title="Edit Location and Enter new Reading">Proceed the Action</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br>
+</div>

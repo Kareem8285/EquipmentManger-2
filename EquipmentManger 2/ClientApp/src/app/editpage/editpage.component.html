@@ -1,0 +1,19 @@
+<div class="class1">
+    <p>{{xhomeeq.equipmentName}}</p>
+    <p>{{xhomeeq.categoryName}}</p>
+    <p>{{xhomeeq.equipmentSerialno}}</p>
+    <p>{{xhomeeq.eqcapacity}}</p>
+</div>
+<br>
+<div class="class2">
+    <form>
+        <label for="fname">Location</label>
+        <input type="text" #refE1 name="firstname" placeholder="location.." value={{xhomeeq.eqlocation}}>
+        <br>
+        <label for="lname">Reading</label>
+        <input type="number" placeholder="Reading.." #refE2 (keyup)='Recording_Reading($event)'>
+        <input type="button" value="Save" class="btn btn-success" (click)='SaveData(refE1,refE2)'>
+
+    </form>
+</div>
+<br>

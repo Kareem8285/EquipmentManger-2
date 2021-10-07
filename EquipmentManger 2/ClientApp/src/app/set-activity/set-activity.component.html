@@ -1,0 +1,18 @@
+<div class="class1">
+    <p>{{Eqitem.equipmentName}}</p>
+    <p>{{Eqitem.equipmentSerialno}}</p>
+    <p>{{Eqitem.itemName}}</p>
+    <p>{{Eqitem.itemPartNo}}</p>
+</div>
+<br>
+<div class="class2">
+    <form>
+
+        <label for="lname">Reading</label>
+        <input type="number" placeholder="Reading.." #refE1>
+        <label for="fname">Notes</label>
+        <input type="text" name="firstname" placeholder="Notes..">
+        <input type="button" value="Save" (click)='Savedata( Eqitem.equipmentItemsId,refE1);' class="btn btn-success">
+    </form>
+</div>
+<br>

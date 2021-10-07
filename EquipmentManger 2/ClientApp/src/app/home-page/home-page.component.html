@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 " style=" padding-top: 25px;">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link  btn btn-outline-success  my-class mybtn" (click)='serve.Filtered_Eq_by_category("All Equipments")'>All Equipments</a>
+                </li>
+            </ul>
+            <ul class="nav flex-column">
+                <li *ngFor=' let x of serve.EquipmentCategoryList ' class="nav-item">
+                    <a class="nav-link  btn btn-outline-success my-class2  mybtn" (click)='serve.Filtered_Eq_by_category(x.catname)'>{{x.catname}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-9 ">
+            <table id="myTable">
+                <thead>
+                    <tr class="header">
+                        <th>Equpiment Category</th>
+                        <th>Type</th>
+                        <th>Capacity</th>
+                        <th>Serial No.</th>
+                        <th>Location</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tr *ngFor='let x of serve.Home_page_eq_by_category '>
+                    <td>{{x.categoryName}}</td>
+                    <td>{{x.equipmentName}}</td>
+                    <td>{{x.eqcapacity}}</td>
+                    <td>{{x.equipmentSerialno}}</td>
+                    <td>{{x.eqlocation}}</td>
+                    <td>
+                        <a [routerLink]="['/Edit',x.equipmentId]" class="btn btn-secondary mybtn" data-toggle="tooltip" title="Edit Location and Enter new Reading">Edit </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
