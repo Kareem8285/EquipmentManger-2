@@ -8,9 +8,7 @@ import { activitySort } from '../activitySort';
   templateUrl: './activities.component.html',
   styleUrls: ['./activities.component.css']
 })
-export class ActivitiesComponent implements OnInit {
-  //needActivitylst: Array<Activity>;
-  //myarray: Array<activitySort>;
+export class ActivitiesComponent implements OnInit {  
   constructor(public serve: EquipmentservicesService) {
     this.serve.GetItesmsDataFromAPI();
   }

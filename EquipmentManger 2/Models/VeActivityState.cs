@@ -14,7 +14,7 @@ namespace EquipmentManger_2.Models
         public string ItemName { get; set; }
         public string ItemPartNo { get; set; }
         public int MintenanceState { get; set; }      
-       public int EquipmentItemsId { get; set; }
-
+        public int EquipmentItemsId { get; set; }
+        public int LastMinH { get; set; }
     }
 }

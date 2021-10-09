@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-3 " style=" padding-top: 25px;">
+        <div class="col-lg-2 " style=" padding-top: 25px;">
             <ul class="nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link  btn btn-outline-success  my-class mybtn" (click)='serve.Filtered_Eq_by_category("All Equipments")'>All Equipments</a>
@@ -12,16 +12,18 @@
                 </li>
             </ul>
         </div>
-        <div class="col-lg-9 ">
+        <div class="col-lg-10 ">
             <table id="myTable">
                 <thead>
                     <tr class="header">
-                        <th>Equpiment Category</th>
-                        <th>Type</th>
-                        <th>Capacity</th>
-                        <th>Serial No.</th>
-                        <th>Location</th>
-                        <th></th>
+                        <th style="width: 10%;">Equpiment Category</th>
+                        <th style="width: 10%;">Type</th>
+                        <th style="width: 10%;">Capacity</th>
+                        <th style="width: 10%;">Serial No.</th>
+                        <th style="width: 10%;">Location</th>
+                        <th style="width: 10%;">New Reading.</th>
+                        <th style="width: 10%;"></th>
+                        <th style="width: 10%;"></th>
                     </tr>
                 </thead>
 
@@ -30,10 +32,14 @@
                     <td>{{x.equipmentName}}</td>
                     <td>{{x.eqcapacity}}</td>
                     <td>{{x.equipmentSerialno}}</td>
-                    <td>{{x.eqlocation}}</td>
                     <td>
-                        <a [routerLink]="['/Edit',x.equipmentId]" class="btn btn-secondary mybtn" data-toggle="tooltip" title="Edit Location and Enter new Reading">Edit </a>
-                    </td>
+                        <input type="text" value={{x.eqlocation}}></td>
+                    <td>
+                        <td>
+                            <input type="number"></td>
+                        <td>
+                            <a [routerLink]="[ '/Edit',x.equipmentId] " class="btn btn-secondary mybtn " data-toggle="tooltip " title="Edit Location and Enter new Reading ">Edit </a>
+                        </td>
                 </tr>
             </table>
         </div>

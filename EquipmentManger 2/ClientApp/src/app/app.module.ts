@@ -14,6 +14,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ActivitiesComponent } from './activities/activities.component';
 import { SetActivityComponent } from './set-activity/set-activity.component';
+import { AppendItemsComponent } from './append-items/append-items.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SetActivityComponent } from './set-activity/set-activity.component';
     HomePageComponent,
     NavBarComponent,
     ActivitiesComponent,
-    SetActivityComponent
+    SetActivityComponent,
+    AppendItemsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -39,7 +41,8 @@ import { SetActivityComponent } from './set-activity/set-activity.component';
      {path:'Activities',component:ActivitiesComponent,pathMatch:'full'},
      {path:'Edit/:id', component: EditpageComponent , pathMatch:'full'},
      { path: 'Home', component: HomePageComponent, pathMatch: 'full' },
-     {path:'SetActivity/:id', component:SetActivityComponent , pathMatch:'full'}
+     {path:'SetActivity/:id', component:SetActivityComponent , pathMatch:'full'},     
+     { path: 'ِAppend_Items', component: AppendItemsComponent, pathMatch: 'full' },
     ])
   ],
   providers: [],
